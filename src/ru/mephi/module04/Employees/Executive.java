@@ -5,18 +5,23 @@ public class Executive extends Employee {
     private double profitPercentageOfTheYear;
     private final String position;
 
-    Executive(String name, String surname, double salary) {
+    public Executive(String name, String surname, double salary) {
         super(name, surname);
         this.salary = salary;
         this.profitPercentageOfTheYear = 0;
         this.position = "Executive";
     }
 
-    Executive(String name, String surname, String patronymic, double salary) {
+    public Executive(String name, String surname, String patronymic, double salary) {
         super(name, surname, patronymic);
         this.salary = salary;
         this.profitPercentageOfTheYear = 0;
         this.position = "Executive";
+    }
+
+    @Override
+    public String getPosition() {
+        return position;
     }
 
     public double getSalary() {

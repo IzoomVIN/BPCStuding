@@ -5,18 +5,23 @@ public class Manager extends Employee {
     private double percentOfSales;
     private final String position;
 
-    Manager(String name, String surname, double salary) {
+    public Manager(String name, String surname, double salary) {
         super(name, surname);
         this.salary = salary;
         this.percentOfSales = 0;
         this.position = "Manager";
     }
 
-    Manager(String name, String surname, String patronymic, double salary) {
+    public Manager(String name, String surname, String patronymic, double salary) {
         super(name, surname, patronymic);
         this.salary = salary;
         this.percentOfSales = 0;
         this.position = "Manager";
+    }
+
+    @Override
+    public String getPosition() {
+        return position;
     }
 
     public double getSalary() {

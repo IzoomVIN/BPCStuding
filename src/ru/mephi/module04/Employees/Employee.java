@@ -4,7 +4,7 @@ public abstract class Employee {
     private final String name;
     private final String surname;
     private final String patronymic;
-    private final String position = null;
+    private String position;
     private long id;
 
     Employee(String name, String surname){

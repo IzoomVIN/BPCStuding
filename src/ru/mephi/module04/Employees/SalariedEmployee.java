@@ -16,6 +16,11 @@ public class SalariedEmployee extends Employee {
         this.position = "Salaried employee";
     }
 
+    @Override
+    public String getPosition() {
+        return position;
+    }
+
     public double getSalary() {
         return salary;
     }

@@ -1,37 +1,42 @@
 package ru.mephi.module04.Employees;
 
 public class HourlyEmployee extends Employee {
-    private int countOfHour;
-    private int costOfHour;
+    private double countOfHour;
+    private double costOfHour;
     private final String position;
 
     public HourlyEmployee(String name, String surname, int costOfHour) {
         super(name, surname);
         this.costOfHour = costOfHour;
-        this.countOfHour = 0;
+        this.countOfHour = 1;
         this.position = "Hourly employee";
     }
 
-    public HourlyEmployee(String name, String surname, String patronymic, int costOfHour) {
+    public HourlyEmployee(String name, String surname, String patronymic, double costOfHour) {
         super(name, surname, patronymic);
         this.costOfHour = costOfHour;
-        this.countOfHour = 0;
+        this.countOfHour = 1;
         this.position = "Hourly employee";
     }
 
-    public int getCountOfHour() {
+    @Override
+    public String getPosition() {
+        return position;
+    }
+
+    public double getCountOfHour() {
         return countOfHour;
     }
 
-    public void setCountOfHour(int countOfHour) {
+    public void setCountOfHour(double countOfHour) {
         this.countOfHour = countOfHour;
     }
 
-    public int getCostOfHour() {
+    public double getCostOfHour() {
         return costOfHour;
     }
 
-    public void setCostOfHour(int costOfHour) {
+    public void setCostOfHour(double costOfHour) {
         this.costOfHour = costOfHour;
     }
 
